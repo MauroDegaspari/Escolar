@@ -13,25 +13,22 @@ public class UnidadeDTO implements Serializable{
 	private int cnpj;
 	private Date dt_inscricao;
 	private String sn_ativa;
-	private int cd_endereco;
-	private int cd_turma;
-	private int cd_professor;
+
 	
 	public UnidadeDTO() {
 		
 	}
 
-	public UnidadeDTO(Long cd_escola, String nm_escola, int cnpj, Date dt_inscricao, 
-						 String sn_ativa, int cd_endereco,int cd_turma, int cd_professor) {
+	public UnidadeDTO(Long cd_escola, String nm_escola, 
+					  int cnpj, Date dt_inscricao, 
+					  String sn_ativa ) {
 		
 		this.cd_escola = cd_escola;
 		this.nm_escola = nm_escola;
 		this.cnpj = cnpj;
 		this.dt_inscricao = dt_inscricao;
 		this.sn_ativa = sn_ativa;
-		this.cd_endereco = cd_endereco;
-		this.cd_turma = cd_turma;
-		this.cd_professor = cd_professor;
+		
 	}
 	
 	public UnidadeDTO(UnidadeEntity entity) {
@@ -39,6 +36,7 @@ public class UnidadeDTO implements Serializable{
 		this.nm_escola = entity.getNm_escola();
 		this.cnpj = entity.getCnpj();
 		this.sn_ativa = entity.getSn_ativa();
+		this.dt_inscricao = entity.getDataInscricao();
 		
 	}
 
@@ -82,15 +80,4 @@ public class UnidadeDTO implements Serializable{
 		this.sn_ativa = sn_ativa;
 	}
 
-	public int getCd_endereco() {
-		return cd_endereco;
-	}
-
-	public int getCd_turma() {
-		return cd_turma;
-	}
-
-	public int getCd_professor() {
-		return cd_professor;
-	}
 }
