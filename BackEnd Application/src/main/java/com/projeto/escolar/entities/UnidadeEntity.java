@@ -24,24 +24,23 @@ public class UnidadeEntity {
 	
 	@Column(name="sn_ativa", nullable = false)
 	private String sn_ativa;
-	private int cd_endereco;
-	private int cd_turma;
 	
+	@Column(name="dt_inscricao")
+	private Date dataInscricao;
 	
 	public UnidadeEntity() {
 		
 	}
 
-	public UnidadeEntity(Long cd_escola, String nm_escola, int cnpj, Date dt_inscricao, 
+	public UnidadeEntity(Long cd_escola, String nm_escola, int cnpj, Date dataInscricao, 
 						 String sn_ativa, int cd_endereco,int cd_turma, int cd_professor) {
 		
 		this.cd_escola = cd_escola;
 		this.nm_escola = nm_escola;
 		this.cnpj = cnpj;
-//		this.dt_inscricao = dt_inscricao;
+		this.dataInscricao = dataInscricao;
 		this.sn_ativa = sn_ativa;
-		this.cd_endereco = cd_endereco;
-		this.cd_turma = cd_turma;
+		
 		
 	}
 
@@ -69,14 +68,6 @@ public class UnidadeEntity {
 		this.cnpj = cnpj;
 	}
 
-//	public Date getDt_inscricao() {
-//		return dt_inscricao;
-//	}
-//
-//	public void setDt_inscricao(Date dt_inscricao) {
-//		this.dt_inscricao = dt_inscricao;
-//	}
-
 	public String getSn_ativa() {
 		return sn_ativa;
 	}
@@ -84,14 +75,16 @@ public class UnidadeEntity {
 	public void setSn_ativa(String sn_ativa) {
 		this.sn_ativa = sn_ativa;
 	}
-
-	public int getCd_endereco() {
-		return cd_endereco;
+	
+	public Date getDataInscricao() {
+		return dataInscricao;
 	}
 
-	public int getCd_turma() {
-		return cd_turma;
+	public void setDataInscricao(Date dataInscricao) {
+		this.dataInscricao = dataInscricao;
 	}
+
+
 
 	
 	
