@@ -1,15 +1,34 @@
 package com.projeto.escolar.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import javax.persistence.Table;
+@Entity
+@Table(name="endereco")
 public class EnderecoEntity {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long cdEndereco;
+	
+	@Column(name="rua")
 	private String rua;
+	
+	@Column(name="bairro")
 	private String bairro;
+	
+	@Column(name="cidade")
 	private String cidade;
+	
+	@Column(name="uf")
 	private String uf;
+	
+	@Column(name="cep")
 	private String cep;
 	
 	@ManyToOne
