@@ -31,9 +31,9 @@ public class EnderecoEntity {
 	@Column(name="cep")
 	private String cep;
 	
-	@ManyToOne
-	@JoinColumn(name ="cd_escola")
-	private UnidadeEntity unidade;
+//	@ManyToOne
+//	@JoinColumn(name ="cd_escola")
+//	private UnidadeEntity unidade;
 	
 	public EnderecoEntity() {
 		
