@@ -26,6 +26,7 @@ public class TutorEntity {
 		this.endereco = endereco;
 	}
 
+	//gettes & settes
 	public Long getCdTutor() {
 		return cdTutor;
 	}
