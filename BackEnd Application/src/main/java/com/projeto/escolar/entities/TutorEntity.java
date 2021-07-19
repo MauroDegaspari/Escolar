@@ -2,6 +2,11 @@ package com.projeto.escolar.entities;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tutor")
 public class TutorEntity {
 	 
 	private Long cdTutor;
